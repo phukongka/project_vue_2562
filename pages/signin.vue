@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     async signIn() {
-        const my_moment = moment("2019-06-06 23:12:00", "YYYY-MM-DD hh:mm:ss");
+        const my_moment = moment("2019-06-07 09:12:00", "YYYY-MM-DD hh:mm:ss");
         let  timeStatus =''
         let timeHours = moment().diff(my_moment, "hours");
         let timeMinutes = moment().diff(my_moment, "minutes");

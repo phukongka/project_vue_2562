@@ -1,9 +1,8 @@
-
 <template>
 <div id="app">
   <v-app id="inspire">
             <v-flex xs12 style="padding:10px">
-              <p>เลือกผู้ใช้งาน {{ position || '' }}</p>
+              <p>เลือกผู้ใช้งาน </p>
               <v-radio-group v-model="chk_status" :mandatory="false" row>
                 <v-radio label="ครู / บุคลากร" color="success" value="2"></v-radio>
                 <v-radio label="นักเรียน / นักศึกษา" color="success" value="1"></v-radio>
@@ -103,7 +102,7 @@
               <v-flex xs4 v-for="num in 3" :key="num">
                 <v-select
                   prepend-icon="fas fa-th"
-                  :items="filter_group"
+                  :items="group"
                   item-value="g_code"
                   :label="label_group+' '+num"
                   placeholder="รหัสกลุ่มการเรียน"
@@ -216,7 +215,7 @@
             <v-flex xs12 >
               <v-select
                 prepend-icon="fas fa-th"
-                :items="filter_group_std"
+                :items="group"
                 item-value="g_code"
                 label="กลุ่มการเรียน"
                 placeholder="รหัสกลุ่มการเรียน"
@@ -425,13 +424,13 @@
         },
         computed:{
           filter_group(){
-          //  return this.group.filter(x=>''+x.d_code===this.t_dep)
+            return this.group.filter(x=>''+x.d_code===this.t_code)
           },
           computedDateFormatted () {
             return this.formatDate(this.std_birthday)
           },
           filter_group_std(){
-        //    return this.item_group.filter(x=>''+x.d_code===this.d_code)
+            return this.item_group.filter(x=>''+x.d_code===this.d_code)
           }
         },
         watch: {
@@ -446,10 +445,11 @@
           },
         },
         async created(){
+           console.log('แผนกวิชา')
           let res=await this.$http.get('/group/list')
           this.group=res.data.datas
           let res2=await this.$http.get('/department/list')
-          this.department=res2.data.datas
+           this.department=res2.data.datas
           this.sh_group()
           this.sh_dep()
         },

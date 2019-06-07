@@ -2,23 +2,23 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _3fbc4040 = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */))
-const _7926145c = () => interopDefault(import('..\\pages\\home.vue' /* webpackChunkName: "pages_home" */))
-const _6cfd4488 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
-const _ab41d5b8 = () => interopDefault(import('..\\pages\\login_old.vue' /* webpackChunkName: "pages_login_old" */))
-const _23cc11a0 = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages_register" */))
-const _c3241f42 = () => interopDefault(import('..\\pages\\signin.vue' /* webpackChunkName: "pages_signin" */))
-const _431adbf4 = () => interopDefault(import('..\\pages\\student\\index.vue' /* webpackChunkName: "pages_student_index" */))
-const _1449f6ed = () => interopDefault(import('..\\pages\\student-list.vue' /* webpackChunkName: "pages_student-list" */))
-const _b023d406 = () => interopDefault(import('..\\pages\\admin\\teacher_list.vue' /* webpackChunkName: "pages_admin_teacher_list" */))
-const _f2f311bc = () => interopDefault(import('..\\pages\\reports\\report_condition.vue' /* webpackChunkName: "pages_reports_report_condition" */))
-const _6f61a9bd = () => interopDefault(import('..\\pages\\reports\\report_everda1.vue' /* webpackChunkName: "pages_reports_report_everda1" */))
-const _73584605 = () => interopDefault(import('..\\pages\\reports\\report_everday.vue' /* webpackChunkName: "pages_reports_report_everday" */))
-const _108be708 = () => interopDefault(import('..\\pages\\reports\\report_everday1.vue' /* webpackChunkName: "pages_reports_report_everday1" */))
-const _46ff3a2d = () => interopDefault(import('..\\pages\\reports\\report_one.vue' /* webpackChunkName: "pages_reports_report_one" */))
-const _049d470c = () => interopDefault(import('..\\pages\\req\\human.vue' /* webpackChunkName: "pages_req_human" */))
-const _204a346d = () => interopDefault(import('..\\pages\\student\\index1.vue' /* webpackChunkName: "pages_student_index1" */))
-const _004c8ab6 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _5c3d8a1e = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages_about" */))
+const _d425ab44 = () => interopDefault(import('..\\pages\\home.vue' /* webpackChunkName: "pages_home" */))
+const _459d07fa = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
+const _00011f3c = () => interopDefault(import('..\\pages\\login_old.vue' /* webpackChunkName: "pages_login_old" */))
+const _899752bc = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages_register" */))
+const _b470e43e = () => interopDefault(import('..\\pages\\signin.vue' /* webpackChunkName: "pages_signin" */))
+const _2447d776 = () => interopDefault(import('..\\pages\\student\\index.vue' /* webpackChunkName: "pages_student_index" */))
+const _f7b82a22 = () => interopDefault(import('..\\pages\\student-list.vue' /* webpackChunkName: "pages_student-list" */))
+const _5f08088a = () => interopDefault(import('..\\pages\\admin\\teacher_list.vue' /* webpackChunkName: "pages_admin_teacher_list" */))
+const _f196d340 = () => interopDefault(import('..\\pages\\reports\\report_condition.vue' /* webpackChunkName: "pages_reports_report_condition" */))
+const _2eea807b = () => interopDefault(import('..\\pages\\reports\\report_everda1.vue' /* webpackChunkName: "pages_reports_report_everda1" */))
+const _32e11cc3 = () => interopDefault(import('..\\pages\\reports\\report_everday.vue' /* webpackChunkName: "pages_reports_report_everday" */))
+const _294c0d7e = () => interopDefault(import('..\\pages\\reports\\report_everday1.vue' /* webpackChunkName: "pages_reports_report_everday1" */))
+const _6f8d1feb = () => interopDefault(import('..\\pages\\reports\\report_one.vue' /* webpackChunkName: "pages_reports_report_one" */))
+const _6308538e = () => interopDefault(import('..\\pages\\req\\human.vue' /* webpackChunkName: "pages_req_human" */))
+const _64bca92b = () => interopDefault(import('..\\pages\\student\\index1.vue' /* webpackChunkName: "pages_student_index1" */))
+const _7bf564e3 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
 
@@ -96,71 +96,71 @@ export function createRouter() {
 
     routes: [{
       path: "/about",
-      component: _3fbc4040,
+      component: _5c3d8a1e,
       name: "about"
     }, {
       path: "/home",
-      component: _7926145c,
+      component: _d425ab44,
       name: "home"
     }, {
       path: "/login",
-      component: _6cfd4488,
+      component: _459d07fa,
       name: "login"
     }, {
       path: "/login_old",
-      component: _ab41d5b8,
+      component: _00011f3c,
       name: "login_old"
     }, {
       path: "/register",
-      component: _23cc11a0,
+      component: _899752bc,
       name: "register"
     }, {
       path: "/signin",
-      component: _c3241f42,
+      component: _b470e43e,
       name: "signin"
     }, {
       path: "/student",
-      component: _431adbf4,
+      component: _2447d776,
       name: "student"
     }, {
       path: "/student-list",
-      component: _1449f6ed,
+      component: _f7b82a22,
       name: "student-list"
     }, {
       path: "/admin/teacher_list",
-      component: _b023d406,
+      component: _5f08088a,
       name: "admin-teacher_list"
     }, {
       path: "/reports/report_condition",
-      component: _f2f311bc,
+      component: _f196d340,
       name: "reports-report_condition"
     }, {
       path: "/reports/report_everda1",
-      component: _6f61a9bd,
+      component: _2eea807b,
       name: "reports-report_everda1"
     }, {
       path: "/reports/report_everday",
-      component: _73584605,
+      component: _32e11cc3,
       name: "reports-report_everday"
     }, {
       path: "/reports/report_everday1",
-      component: _108be708,
+      component: _294c0d7e,
       name: "reports-report_everday1"
     }, {
       path: "/reports/report_one",
-      component: _46ff3a2d,
+      component: _6f8d1feb,
       name: "reports-report_one"
     }, {
       path: "/req/human",
-      component: _049d470c,
+      component: _6308538e,
       name: "req-human"
     }, {
       path: "/student/index1",
-      component: _204a346d,
+      component: _64bca92b,
       name: "student-index1"
     }, {
       path: "/",
-      component: _004c8ab6,
+      component: _7bf564e3,
       name: "index"
     }],
 

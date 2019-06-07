@@ -27,7 +27,7 @@ import moment from "moment";
 // };
 
 export default {
-  // layout: "tem_signin",
+   layout: "tem_signin",
   data() {
      
     return {
@@ -44,80 +44,6 @@ export default {
       user: {}
     };
   },
-  methods: {
-    async signIn() {
-        const my_moment = moment("2019-06-05 08:30:00", "YYYY-MM-DD hh:mm:ss");
-        let  timeStatus =''
-        let timeHours = moment().diff(my_moment, "hours");
-        let timeMinutes = moment().diff(my_moment, "minutes");
-        let start_time = moment(Date.now()).format("YYYY-MM-DD HH:mm:ss")
-        let date_in = moment(Date.now()).format("HH:mm:ss")
-        let date_out = moment(Date.now()).format("HH:mm:ss")
-        let user
-        console.log('timestatus', timeMinutes)
-        console.log('timesHours', timeHours)   
-        console.log('start_time', start_time)   
-        console.log('datein', date_in)  
-      if(timeMinutes <= 30 ){
-         timeStatus = "มาทำงาน"   
-            this.saveSingIn() 
-      }    
-       if (timeMinutes > 30 && timeHours < 3) {
-            timeStatus = "มาสาย"   
-            this.saveSingIn()          
-        }
-        if (timeHours >= 3 && timeHours <=4 ){
-            timeStatus = "ติดต่อบุคลากร"
-            this.saveSingIn()  
-        }
-        if(timeHours >= 4) {
-           this.signOut();
-        }
-        this.form.start_time = start_time
-        this.form.date_in = date_in
-        this.form.status = timeStatus
-        this.form.date_out = date_out
-
-        console.log(timeStatus); 
-     
-    }, // end SignIn
-    async saveSingIn() {
-       let res = await this.$http.post(
-        "http://localhost:9000/user/signin",this.form
-        
-      );
-      if (!res.data.ok) {
-        // save  ไม่สำเร็จ
-        console.log("Save failed");
-        return;
-      }
-      console.log("save ok");
-      //1. ไปหน้าหลัก
-      this.$router.push("/signin");
-      // ridirect to signin
-    }, // saveSignIN
-    async signOut() {
-        let res = await this.$http.post("http://localhost:9000/user/signOut",this.form);
-      if (!res.data.ok) {
-        // Update  ไม่สำเร็จ
-        console.log("Update failed");
-        return;
-      }
-      console.log("Update ok");
-      //1. ไปหน้าหลัก
-      this.$router.push("/signin");
-      // ridirect to signin
-    }, // end SignOut
-    
-    logOut() {
-      window.sessionStorage.removeItem("user");
-      this.$router.replace("/login");
-    },
-     showList() {
-      this.$router.push("./reports/report_one");
-      // ridirect to signin
-    } // end showList
-  }
-};
+}
 </script>
 
