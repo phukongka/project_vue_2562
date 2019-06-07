@@ -3,7 +3,9 @@
     <v-container @keypress.enter="doLogin" >
       <v-layout column>
         <v-flex xs12>
+                      <audio ref="start" src="/audio/start.wav" autoplay></audio>
           <v-card>
+
             <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
           </v-card>
         </v-flex>
@@ -72,7 +74,8 @@ export default {
   },
   methods: {
     register() {
-      this.$router.push({path: "/register"})
+      this.$refs.start.play()
+      //this.$router.push({path: "/register"})
     },
     async doLogin() {
       // let form = {
