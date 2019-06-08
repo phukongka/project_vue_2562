@@ -27,7 +27,7 @@ import moment from "moment";
 // };
 
 export default {
-   layout: "tem_signin",
+   layout: "public",
   data() {
      
     return {

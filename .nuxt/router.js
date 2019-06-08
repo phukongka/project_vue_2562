@@ -6,8 +6,11 @@ const _5c3d8a1e = () => interopDefault(import('..\\pages\\about.vue' /* webpackC
 const _d425ab44 = () => interopDefault(import('..\\pages\\home.vue' /* webpackChunkName: "pages_home" */))
 const _459d07fa = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
 const _00011f3c = () => interopDefault(import('..\\pages\\login_old.vue' /* webpackChunkName: "pages_login_old" */))
+const _6e0d8927 = () => interopDefault(import('..\\pages\\login1.vue' /* webpackChunkName: "pages_login1" */))
+const _119337bf = () => interopDefault(import('..\\pages\\personal.vue' /* webpackChunkName: "pages_personal" */))
 const _899752bc = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages_register" */))
 const _b470e43e = () => interopDefault(import('..\\pages\\signin.vue' /* webpackChunkName: "pages_signin" */))
+const _1333c020 = () => interopDefault(import('..\\pages\\signin1.vue' /* webpackChunkName: "pages_signin1" */))
 const _2447d776 = () => interopDefault(import('..\\pages\\student\\index.vue' /* webpackChunkName: "pages_student_index" */))
 const _f7b82a22 = () => interopDefault(import('..\\pages\\student-list.vue' /* webpackChunkName: "pages_student-list" */))
 const _5f08088a = () => interopDefault(import('..\\pages\\admin\\teacher_list.vue' /* webpackChunkName: "pages_admin_teacher_list" */))
@@ -111,6 +114,14 @@ export function createRouter() {
       component: _00011f3c,
       name: "login_old"
     }, {
+      path: "/login1",
+      component: _6e0d8927,
+      name: "login1"
+    }, {
+      path: "/personal",
+      component: _119337bf,
+      name: "personal"
+    }, {
       path: "/register",
       component: _899752bc,
       name: "register"
@@ -118,6 +129,10 @@ export function createRouter() {
       path: "/signin",
       component: _b470e43e,
       name: "signin"
+    }, {
+      path: "/signin1",
+      component: _1333c020,
+      name: "signin1"
     }, {
       path: "/student",
       component: _2447d776,

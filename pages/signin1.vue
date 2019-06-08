@@ -1,21 +1,15 @@
 <template>
   <div>
-    <h1>ระบบลงเวลาปฏิบัติงาน</h1>
+    <h1>ระบบลงเวลาปฏิบัติงาน {{user.name}}</h1>
     <v-flex>
       <v-text-field v-model="form.user" label="กรอกรหัส"/>
-    </v-flex>        
-     <v-chip color="green" outline @click="signIn">
-      signIn
-       <v-icon>account_circle</v-icon>
-    </v-chip>
-     <v-chip color="orange" outline @click="showList">
-      รายละเอียด
-       <v-icon>event</v-icon>
-    </v-chip>
-     <v-chip color="pink" outline @click="logOut">
-      Logout
-       <v-icon>highlight_off</v-icon>
-    </v-chip>
+     
+    </v-flex>
+    
+    <v-btn color="success" @click="signIn">signIn</v-btn>
+    <v-btn color="success" @click="showList">รายละเอียด</v-btn>
+    <v-btn color="success" @click="showListCon">รายละเอียด_มาสาย</v-btn>
+    <v-btn color="success" @click="logOut">Logout</v-btn>
   </div>
 </template>
 <script>
@@ -59,7 +53,7 @@ export default {
   },
   methods: {
     async signIn() {
-        const my_moment = moment("2019-06-05 08:30:00", "YYYY-MM-DD hh:mm:ss");
+        const my_moment = moment("2019-06-07 09:12:00", "YYYY-MM-DD hh:mm:ss");
         let  timeStatus =''
         let timeHours = moment().diff(my_moment, "hours");
         let timeMinutes = moment().diff(my_moment, "minutes");
@@ -72,20 +66,23 @@ export default {
         console.log('start_time', start_time)   
         console.log('datein', date_in)  
       if(timeMinutes <= 30 ){
-         timeStatus = "มาทำงาน"   
+         timeStatus = "1" // มาทำงาน   
+         console.log('ปกติ',timeMinutes)
             this.saveSingIn() 
       }    
        if (timeMinutes > 30 && timeHours < 3) {
-            timeStatus = "มาสาย"   
+            timeStatus = "2" // มาสาย   
             this.saveSingIn()          
         }
         if (timeHours >= 3 && timeHours <=4 ){
-            timeStatus = "ติดต่อบุคลากร"
+            timeStatus = "3" //  ติดต่องานบุคลากร
             this.saveSingIn()  
         }
-        if(timeHours >= 4) {
-           this.signOut();
-        }
+         if(timeHours >= 4) {
+            //TODO  alert แจ้งเตือน
+            console.log("ติตด่อบุคลกร หมดเวลา")
+             this.$router.replace("/signin");
+          }
         this.form.start_time = start_time
         this.form.date_in = date_in
         this.form.status = timeStatus
@@ -124,10 +121,14 @@ export default {
     
     logOut() {
       window.sessionStorage.removeItem("user");
-      this.$router.replace("/login");
+      this.$router.replace("/");
     },
-    async showList() {
+    showList() {
       this.$router.push("./reports/report_everday");
+      // ridirect to signin
+    }, // end showList
+    showListCon() {
+      this.$router.push("./reports/report_condition");
       // ridirect to signin
     } // end showList
   }

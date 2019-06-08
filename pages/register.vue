@@ -366,7 +366,7 @@
 
 <script>
     export default {
-        layout: 'null_layout',
+       layout: "public",
         data () {
             return {
               chk_status:"1",
@@ -515,7 +515,7 @@
                 formData.append('t_tel',this.t_tel)
                 formData.append('mst_1',this.mst_1)
                 formData.append('u_id',sessionStorage.getItem("username"))
-                formData.append('u_table',"pk_teacher")
+                formData.append('u_table',"teacher")
 
               let res=await this.$http.post("teacher/teacher_add",formData,{
                 onUploadProgress: uploadEvent => {
@@ -535,6 +535,7 @@
             reader.readAsDataURL(image);
             reader.onload = e =>{              
               this.img=e.target.result;
+               this.$router.replace("/register")
               // console.log(this.img_side);
             };
           },

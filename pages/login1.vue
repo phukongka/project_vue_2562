@@ -59,7 +59,7 @@
 // };
 
 export default {
-  layout: "public",
+  //layout: "public",
   data() {
     return {
       //form: JSON.parse(JSON.stringify(blankform)),
@@ -78,7 +78,6 @@ export default {
       //this.$router.push({path: "/register"})
     },
     async doLogin() {
-      this.$refs.start.play()
       // let form = {
       //   user: "",
       //   pass: ""

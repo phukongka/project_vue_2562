@@ -33,6 +33,7 @@ const my_moment = moment("2019-06-05 09:00:00", "YYYY-MM-DD hh:mm:ss");
 // console.log("diff minutes ::==", moment().diff(my_moment, "minutes"));
 // console.log("diff seconds ::==", moment().diff(my_moment, "seconds"));
 export default {
+   layout: "public",
   data() {
     return {
       user: {},

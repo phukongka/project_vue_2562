@@ -1,5 +1,4 @@
 <template>
-
   <v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
@@ -75,7 +74,7 @@
       app
       fixed
     >
-      <v-toolbar-title  style="width: 300px" class="ml-0 pl-3">
+      <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
         <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <span class="hidden-sm-and-down">Google Contacts</span>
       </v-toolbar-title>
@@ -196,8 +195,7 @@
 
 <script>
   export default {
-    data() {
-      return {
+    data: () => ({
       dialog: false,
       drawer: null,
       items: [
@@ -241,21 +239,9 @@
          { icon: 'phonelink', text: 'ออกจากระบบ' }
         
       ]
-    }
-    },
+    }),
     props: {
       source: String
-    },
-    created() {
-    let user = window.sessionStorage.getItem("user"); // data is string
-    console.log('user',user)
-    if (!user) {
-      return this.$router.replace("/");
     }
-    //this.$store.dispatch("/home");
-    this.user = JSON.parse(user); // แปลงกลับเป็น object ถ้า
-    // เก็บใส่ store ไม่ต้องเขียนแบบนี้ทุกหน้า
-    this.$router.replace("/signin");
-  } // created
-  };
+  }
 </script>

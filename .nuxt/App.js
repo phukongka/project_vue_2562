@@ -1,12 +1,20 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import _60132973 from '..\\layouts\\default_old.vue'
+import _008ea4d2 from '..\\layouts\\backup\\default_old.vue'
+import _4b1be72c from '..\\layouts\\backup\\default.vue'
+import _19c8d9c0 from '..\\layouts\\backup\\public.vue'
+import _6c4d425c from '..\\layouts\\backup\\tem_signin.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
+import _7e152806 from '..\\layouts\\default1.vue'
+import _100afa94 from '..\\layouts\\New folder\\default.vue'
+import _0755d43b from '..\\layouts\\New folder\\default1.vue'
+import _6a75b958 from '..\\layouts\\New folder\\public.vue'
+import _378b9890 from '..\\layouts\\New folder\\tem_signin.vue'
 import _f7662442 from '..\\layouts\\public.vue'
 import _0875b4ca from '..\\layouts\\tem_signin.vue'
 
-const layouts = { "_default_old": _60132973,"_default": _6f6c098b,"_public": _f7662442,"_tem_signin": _0875b4ca }
+const layouts = { "_backup/default_old": _008ea4d2,"_backup/default": _4b1be72c,"_backup/public": _19c8d9c0,"_backup/tem_signin": _6c4d425c,"_default": _6f6c098b,"_default1": _7e152806,"_New folder/default": _100afa94,"_New folder/default1": _0755d43b,"_New folder/public": _6a75b958,"_New folder/tem_signin": _378b9890,"_public": _f7662442,"_tem_signin": _0875b4ca }
 
 export default {
   head: {"title":"EEC-DEMO","meta":[{"charset":"utf8"},{"http-equiv":"X-UA-Compatible","content":"IE-edge"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"shortcut icon","href":".\u002Ficon\u002Fveh.png"},{"rel":"apple-touch-icon","sizes":"180x180","href":".\u002Ficon\u002Fveh.png"},{"rel":"icon","type":"image\u002Fpng","sizes":"32x32","href":".\u002Ficon\u002Fveh.png"},{"rel":"stylesheet","type":"text\u002Fcss","href":"iconfont\u002Fmaterial-icons.css"},{"rel":"stylesheet","type":"text\u002Fcss","href":"css\u002Ffontawesome-free\u002Fcss\u002Fall.css"},{"rel":"stylesheet","type":"text\u002Fcss","href":"css\u002Fcv_style.css?v=1002"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900|Material+Icons"},{"rel":"mask-icon","href":".\u002Ficon\u002Fveh.png","color":"#5bbad5"},{"name":"msapplication-TileColor","content":"#da532c"},{"name":"theme-color","content":"#ffffff"}],"style":[],"script":[]},

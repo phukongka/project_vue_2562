@@ -25,7 +25,7 @@ export default {
   created() {
     let user = window.sessionStorage.getItem("user"); // data is string
     if (!user) {
-      return this.$router.replace("/");
+      return this.$router.replace("/login");
     }
      this.user = JSON.parse(user); // แปลงกลับเป็น object ถ้า
     this.$router.replace("/signin")
@@ -39,3 +39,4 @@ export default {
     // }
   } // created
 };
+</script>

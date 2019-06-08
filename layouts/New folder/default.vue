@@ -1,15 +1,16 @@
 <template>
-  <v-app>
-    <v-toolbar app right>
-      <v-toolbar-title>Welcome {{user.name}}</v-toolbar-title>
-      <v-spacer/>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"/>>
-    </v-toolbar>
-    <v-content>
-      <v-container fluid>
+  <v-app dark>
+    <v-container>
+      <v-navigation-drawer v-model="drawer" app right/>
+      <v-toolbar app>
+        <v-toolbar-title>Welcome {{user.name}}</v-toolbar-title>
+        <v-spacer/>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"/>
+      </v-toolbar>
+      <v-content>
         <nuxt/>
-      </v-container>
-    </v-content>
+      </v-content>
+    </v-container>
      <v-footer color="cyan" app>
       <v-spacer></v-spacer>
       <span class="white--text">&copy; 2017</span>
@@ -28,12 +29,12 @@ export default {
   created() {
     let user = window.sessionStorage.getItem("user"); // data is string
     if (!user) {
-      return this.$router.replace("/login");
+     // return this.$router.replace("/login");
     }
     //this.$store.dispatch("/home");
     this.user = JSON.parse(user); // แปลงกลับเป็น object ถ้า
     // เก็บใส่ store ไม่ต้องเขียนแบบนี้ทุกหน้า
-    this.$router.replace("/home");
+    this.$router.replace("/signin");
   } // created
 };
 </script>
