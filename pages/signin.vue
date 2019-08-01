@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>ระบบลงเวลาปฏิบัติงาน</h1>
-    <v-flex>
+    <v-flex xs4 sm4 md4 align-center>
       <v-text-field v-model="form.user" label="กรอกรหัส"/>
     </v-flex>        
      <v-chip color="green" outline @click="signIn">
@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     async signIn() {
-        const my_moment = moment("2019-06-05 08:30:00", "YYYY-MM-DD hh:mm:ss");
+        const my_moment = moment("2019-06-08 11:30:00", "YYYY-MM-DD hh:mm:ss");
         let  timeStatus =''
         let timeHours = moment().diff(my_moment, "hours");
         let timeMinutes = moment().diff(my_moment, "minutes");
@@ -124,7 +124,7 @@ export default {
     
     logOut() {
       window.sessionStorage.removeItem("user");
-      this.$router.replace("/login");
+      this.$router.replace("/");
     },
     async showList() {
       this.$router.push("./reports/report_everday");

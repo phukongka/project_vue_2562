@@ -7,6 +7,7 @@ const _d425ab44 = () => interopDefault(import('..\\pages\\home.vue' /* webpackCh
 const _459d07fa = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
 const _00011f3c = () => interopDefault(import('..\\pages\\login_old.vue' /* webpackChunkName: "pages_login_old" */))
 const _6e0d8927 = () => interopDefault(import('..\\pages\\login1.vue' /* webpackChunkName: "pages_login1" */))
+const _89d6006e = () => interopDefault(import('..\\pages\\logout.vue' /* webpackChunkName: "pages_logout" */))
 const _119337bf = () => interopDefault(import('..\\pages\\personal.vue' /* webpackChunkName: "pages_personal" */))
 const _899752bc = () => interopDefault(import('..\\pages\\register.vue' /* webpackChunkName: "pages_register" */))
 const _b470e43e = () => interopDefault(import('..\\pages\\signin.vue' /* webpackChunkName: "pages_signin" */))
@@ -14,6 +15,7 @@ const _1333c020 = () => interopDefault(import('..\\pages\\signin1.vue' /* webpac
 const _2447d776 = () => interopDefault(import('..\\pages\\student\\index.vue' /* webpackChunkName: "pages_student_index" */))
 const _f7b82a22 = () => interopDefault(import('..\\pages\\student-list.vue' /* webpackChunkName: "pages_student-list" */))
 const _5f08088a = () => interopDefault(import('..\\pages\\admin\\teacher_list.vue' /* webpackChunkName: "pages_admin_teacher_list" */))
+const _95134658 = () => interopDefault(import('..\\pages\\manage\\teacher\\index.vue' /* webpackChunkName: "pages_manage_teacher_index" */))
 const _f196d340 = () => interopDefault(import('..\\pages\\reports\\report_condition.vue' /* webpackChunkName: "pages_reports_report_condition" */))
 const _2eea807b = () => interopDefault(import('..\\pages\\reports\\report_everda1.vue' /* webpackChunkName: "pages_reports_report_everda1" */))
 const _32e11cc3 = () => interopDefault(import('..\\pages\\reports\\report_everday.vue' /* webpackChunkName: "pages_reports_report_everday" */))
@@ -21,6 +23,13 @@ const _294c0d7e = () => interopDefault(import('..\\pages\\reports\\report_everda
 const _6f8d1feb = () => interopDefault(import('..\\pages\\reports\\report_one.vue' /* webpackChunkName: "pages_reports_report_one" */))
 const _6308538e = () => interopDefault(import('..\\pages\\req\\human.vue' /* webpackChunkName: "pages_req_human" */))
 const _64bca92b = () => interopDefault(import('..\\pages\\student\\index1.vue' /* webpackChunkName: "pages_student_index1" */))
+const _40b5835c = () => interopDefault(import('..\\pages\\teacher\\home.vue' /* webpackChunkName: "pages_teacher_home" */))
+const _1201bf86 = () => interopDefault(import('..\\pages\\teacher\\profile.vue' /* webpackChunkName: "pages_teacher_profile" */))
+const _5f92fb3a = () => interopDefault(import('..\\pages\\teacher\\teacher\\index.vue' /* webpackChunkName: "pages_teacher_teacher_index" */))
+const _0366edc6 = () => interopDefault(import('..\\pages\\manage\\teacher\\add_teacher.vue' /* webpackChunkName: "pages_manage_teacher_add_teacher" */))
+const _2efee51b = () => interopDefault(import('..\\pages\\manage\\teacher\\edit_teacher.vue' /* webpackChunkName: "pages_manage_teacher_edit_teacher" */))
+const _3d5b27d6 = () => interopDefault(import('..\\pages\\teacher\\teacher\\add_teacher.vue' /* webpackChunkName: "pages_teacher_teacher_add_teacher" */))
+const _0e8330ac = () => interopDefault(import('..\\pages\\teacher\\teacher\\edit_teacher.vue' /* webpackChunkName: "pages_teacher_teacher_edit_teacher" */))
 const _7bf564e3 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
@@ -118,6 +127,10 @@ export function createRouter() {
       component: _6e0d8927,
       name: "login1"
     }, {
+      path: "/logout",
+      component: _89d6006e,
+      name: "logout"
+    }, {
       path: "/personal",
       component: _119337bf,
       name: "personal"
@@ -146,6 +159,10 @@ export function createRouter() {
       component: _5f08088a,
       name: "admin-teacher_list"
     }, {
+      path: "/manage/teacher",
+      component: _95134658,
+      name: "manage-teacher"
+    }, {
       path: "/reports/report_condition",
       component: _f196d340,
       name: "reports-report_condition"
@@ -173,6 +190,34 @@ export function createRouter() {
       path: "/student/index1",
       component: _64bca92b,
       name: "student-index1"
+    }, {
+      path: "/teacher/home",
+      component: _40b5835c,
+      name: "teacher-home"
+    }, {
+      path: "/teacher/profile",
+      component: _1201bf86,
+      name: "teacher-profile"
+    }, {
+      path: "/teacher/teacher",
+      component: _5f92fb3a,
+      name: "teacher-teacher"
+    }, {
+      path: "/manage/teacher/add_teacher",
+      component: _0366edc6,
+      name: "manage-teacher-add_teacher"
+    }, {
+      path: "/manage/teacher/edit_teacher",
+      component: _2efee51b,
+      name: "manage-teacher-edit_teacher"
+    }, {
+      path: "/teacher/teacher/add_teacher",
+      component: _3d5b27d6,
+      name: "teacher-teacher-add_teacher"
+    }, {
+      path: "/teacher/teacher/edit_teacher",
+      component: _0e8330ac,
+      name: "teacher-teacher-edit_teacher"
     }, {
       path: "/",
       component: _7bf564e3,

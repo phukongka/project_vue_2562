@@ -416,9 +416,7 @@
               item_pre_name:['นาย','นางสาว','นาง',],
               date: null,
               dateFormatted: null,
-              menu1: false,
-
-          
+              menu1: false,         
           }
     
         },

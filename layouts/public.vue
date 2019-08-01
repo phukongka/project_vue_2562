@@ -110,7 +110,7 @@
     </v-content>
 
     <!-- ปุ่ม + เพื่อเพิ่มข้อมูลการติดต่อ -->
-    <v-btn
+    <!-- <v-btn
       fab
       bottom
       right
@@ -120,7 +120,7 @@
       @click="dialog = !dialog"
     >
       <v-icon>add</v-icon>
-    </v-btn>
+    </v-btn> -->
 
     <!-- Create form create contact -->
     <v-dialog v-model="dialog" width="800px">
@@ -238,7 +238,7 @@
         },
         { icon: 'settings', text: 'ตั้งค่า' },       
         { icon: 'phonelink', text: 'ติดต่อเรา' },
-         { icon: 'phonelink', text: 'ออกจากระบบ' }
+        { icon: 'fas fa-sign-out-alt', text: 'ออกจากระบบ' ,link:"./logout"},
         
       ]
     }
@@ -256,6 +256,9 @@
     this.user = JSON.parse(user); // แปลงกลับเป็น object ถ้า
     // เก็บใส่ store ไม่ต้องเขียนแบบนี้ทุกหน้า
     this.$router.replace("/signin");
-  } // created
+  }, // created
+   methods: {
+      
+   }
   };
 </script>
